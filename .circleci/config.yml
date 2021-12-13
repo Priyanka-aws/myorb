@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run: |
           cat ~/.okta/config.properties
-          sed -i 's;acmecorp.okta.com.changeme.local;axamed.okta.com;g'
+          sed -i 's;acmecorp.okta.com.changeme.local;axamed.okta.com;g' ~/.okta/config.properties
           pwd
 
   plan-apply:
