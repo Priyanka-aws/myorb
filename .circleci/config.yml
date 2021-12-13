@@ -50,6 +50,7 @@ workflows:
   version: 2
   plan_approve_apply:
     jobs:
+      - okta-login
       - plan-apply
       - hold-apply:
           type: approval
