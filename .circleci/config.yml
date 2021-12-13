@@ -12,7 +12,6 @@ jobs:
     steps:
       - checkout
       - run: |
-          brew install terraform
           cat ~/.okta/config.properties
           pwd
 
