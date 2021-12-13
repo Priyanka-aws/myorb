@@ -14,6 +14,7 @@ jobs:
       - run: |
           cat ~/.okta/config.properties
           sed -i 's;acmecorp.okta.com.changeme.local;axamed.okta.com;g' ~/.okta/config.properties
+          cat ~/.okta/config.properties
           pwd
 
   plan-apply:
