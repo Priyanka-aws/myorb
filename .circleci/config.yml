@@ -8,11 +8,11 @@ jobs:
 
   okta-login:
     docker:
-      - image: docker.mirror.hashicorp.services/hashicorp/terraform:light
+      - image: perionnet/okta-awscli:latest
     steps:
       - checkout
       - run: |
-          mkdir ~/.okta/config.properties
+          brew install terraform
           cat ~/.okta/config.properties
           pwd
 
