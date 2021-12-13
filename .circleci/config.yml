@@ -7,8 +7,8 @@ executors:
 jobs:
 
   okta-login:
-
-    executor: my-custom-executor
+    docker:
+      - image: docker.mirror.hashicorp.services/hashicorp/terraform:light
     steps:
       - checkout
       - run: |
