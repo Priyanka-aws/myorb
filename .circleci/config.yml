@@ -19,6 +19,7 @@ jobs:
           # apt-get install unzip -y
           # unzip terraform_0.11.14_linux_amd64.zip
           apt-get upgrade -y
+          apt-get install python-software-properties -y
           apt-get install software-properties-common -y
           apt-get update -y && apt-get install -y gnupg2
           apt-get update && apt-get install -y lsb-release && apt-get clean all
