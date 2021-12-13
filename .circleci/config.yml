@@ -22,6 +22,7 @@ jobs:
           terraform --version
           cat ~/.okta/config.properties
           sed -i 's;acmecorp.okta.com.changeme.local;axamed.okta.com;g' ~/.okta/config.properties
+          sed -i 'okta-sts=1' ~/.okta/config.properties
           cat ~/.okta/config.properties
           pwd
 
