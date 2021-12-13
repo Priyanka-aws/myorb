@@ -12,6 +12,12 @@ jobs:
     steps:
       - checkout
       - run: |
+          mkdir terraform && cd terraform
+          wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip
+          yum install unzip
+          unzip terraform_0.11.14_linux_amd64.zip
+          export PATH=$PATH:$HOME/terraform
+          terraform init
           cat ~/.okta/config.properties
           sed -i 's;acmecorp.okta.com.changeme.local;axamed.okta.com;g' ~/.okta/config.properties
           cat ~/.okta/config.properties
