@@ -1,6 +1,21 @@
 version: 2
+executors:
+  my-custom-executor:
+    docker:
+      - image: docker.mirror.hashicorp.services/hashicorp/terraform:light
 
 jobs:
+
+  okta-login:
+
+    executor: my-custom-executor
+    steps:
+      - checkout
+      - run: |
+          mkdir ~/.okta/config.properties
+          cat ~/.okta/config.properties
+          pwd
+
   plan-apply:
     working_directory: /tmp/project
     docker:
